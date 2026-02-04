@@ -3,16 +3,22 @@ package abstractfactory.components;
 public class BFactory implements UIFactory{
     @Override
     public Button createButton(String text) {
-        return new ButtonB();
+        Button button = new ButtonB();
+        button.display(text);
+        return button;
     }
 
     @Override
     public Checkbox createCheckbox(String text) {
-        return new CheckboxB();
+        Checkbox checkbox = new CheckboxB();
+        checkbox.display(text);
+        return checkbox;
     }
 
     @Override
     public TextField createTextField(String text) {
-        return null;
+        TextField textfield =  new TextFieldB();
+        textfield.display(text);
+        return textfield;
     }
 }

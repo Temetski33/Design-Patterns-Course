@@ -8,10 +8,7 @@ public class Demo {
 
         Button btn = factory.createButton("moi");
         Checkbox cb = factory.createCheckbox("hehe");
-
-        btn.display("moro");
-        cb.display("hoho");
-
+        TextField tf = factory.createTextField("hui");
 
 
     }
