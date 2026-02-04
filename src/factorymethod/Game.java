@@ -1,4 +1,4 @@
 package factorymethod;
 
-public class Demo {
+public class Game {
 }
