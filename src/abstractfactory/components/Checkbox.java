@@ -1,5 +1,5 @@
 package abstractfactory.components;
 
 public interface Checkbox {
-    public void display();
+    public void display(String text);
 }
