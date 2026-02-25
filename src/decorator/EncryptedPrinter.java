@@ -15,8 +15,8 @@ public class EncryptedPrinter extends PrinterDecorator{
     public void print(String message) {
         try {
             String encrypted = encrypt(message);
-            super.print(encrypted); }
-        catch (Exception e) {
+            super.print(encrypted);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
