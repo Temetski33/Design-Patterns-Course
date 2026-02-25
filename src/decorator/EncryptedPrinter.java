@@ -16,6 +16,10 @@ public class EncryptedPrinter extends PrinterDecorator{
         try {
             String encrypted = encrypt(message);
             super.print(encrypted);
+            // Making sure the message is decryptable
+            System.out.println("\n" + "Test decrypt function straight to system print: ");
+            String decrypted = decrypt(encrypted);
+            System.out.println(decrypted);
         } catch (Exception e) {
             e.printStackTrace();
         }
