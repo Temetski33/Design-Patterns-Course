@@ -14,12 +14,19 @@ public class Demo {
                 14, 23, 47, 8, 31
         };
 
-        // Create context and choose strategy
+        // Create context
         Context context = new Context();
+
+        // Test bubble sort
         context.setStrategy(new BubbleSortStrategy());
 
         // Sort and print sorted array to console
         int[] sorted = context.executeStrategy(testArray);
+        System.out.println(Arrays.toString(sorted));
+
+        // Test counting sort
+        context.setStrategy(new CountingSortStrategy());
+        sorted = context.executeStrategy(testArray);
         System.out.println(Arrays.toString(sorted));
 
     }
