@@ -12,7 +12,7 @@ public class Demo {
         // Small array of 30
         int[] smallArray = new int[30];
         for (int i = 0; i < smallArray.length; i++) {
-            smallArray[i] = rng.nextInt(50); // 0–49
+            smallArray[i] = rng.nextInt(50);
         }
 
         // Large array of 500
@@ -21,31 +21,57 @@ public class Demo {
             largeArray[i] = rng.nextInt(50);
         }
 
-        // Create context
         Context context = new Context();
 
-        // Test Bubble Sort
+        // Bubble Sort
         context.setStrategy(new BubbleSortStrategy());
+
         System.out.println("\nBubble Sort (small array):");
-        System.out.println(Arrays.toString(context.executeStrategy(smallArray)));
+        long start = System.nanoTime();
+        int[] sorted = context.executeStrategy(smallArray);
+        long end = System.nanoTime();
+        System.out.println(Arrays.toString(sorted));
+        System.out.println("Time: " + (end - start) + " ns");
 
         System.out.println("\nBubble Sort (large array):");
-        System.out.println(Arrays.toString(context.executeStrategy(largeArray)));
+        start = System.nanoTime();
+        sorted = context.executeStrategy(largeArray);
+        end = System.nanoTime();
+        System.out.println(Arrays.toString(sorted));
+        System.out.println("Time: " + (end - start) + " ns");
 
-        // Test Counting Sort
+        // Counting Sort
         context.setStrategy(new CountingSortStrategy());
+
         System.out.println("\nCounting Sort (small array):");
-        System.out.println(Arrays.toString(context.executeStrategy(smallArray)));
+        start = System.nanoTime();
+        sorted = context.executeStrategy(smallArray);
+        end = System.nanoTime();
+        System.out.println(Arrays.toString(sorted));
+        System.out.println("Time: " + (end - start) + " ns");
 
         System.out.println("\nCounting Sort (large array):");
-        System.out.println(Arrays.toString(context.executeStrategy(largeArray)));
+        start = System.nanoTime();
+        sorted = context.executeStrategy(largeArray);
+        end = System.nanoTime();
+        System.out.println(Arrays.toString(sorted));
+        System.out.println("Time: " + (end - start) + " ns");
 
-        // Test Insertion Sort
+        // Insertion Sort
         context.setStrategy(new InsertionSortStrategy());
+
         System.out.println("\nInsertion Sort (small array):");
-        System.out.println(Arrays.toString(context.executeStrategy(smallArray)));
+        start = System.nanoTime();
+        sorted = context.executeStrategy(smallArray);
+        end = System.nanoTime();
+        System.out.println(Arrays.toString(sorted));
+        System.out.println("Time: " + (end - start) + " ns");
 
         System.out.println("\nInsertion Sort (large array):");
-        System.out.println(Arrays.toString(context.executeStrategy(largeArray)));
+        start = System.nanoTime();
+        sorted = context.executeStrategy(largeArray);
+        end = System.nanoTime();
+        System.out.println(Arrays.toString(sorted));
+        System.out.println("Time: " + (end - start) + " ns");
     }
 }
