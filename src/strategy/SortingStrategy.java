@@ -1,5 +1,5 @@
 package strategy;
 
 public interface SortingStrategy {
-    public int[] sort();
+    public int[] sort(int[] array);
 }
