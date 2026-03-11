@@ -1,37 +1,51 @@
 package strategy;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Demo {
     public static void main(String[] args) {
         System.out.println("Starting main...");
 
-        int[] testArray = {
-                37, 12, 4, 28, 19,
-                46, 7, 33, 15, 22,
-                9, 41, 26, 3, 18,
-                44, 11, 29, 6, 35,
-                14, 23, 47, 8, 31
-        };
+        Random rng = new Random();
+
+        // Small array of 30
+        int[] smallArray = new int[30];
+        for (int i = 0; i < smallArray.length; i++) {
+            smallArray[i] = rng.nextInt(50); // 0–49
+        }
+
+        // Large array of 500
+        int[] largeArray = new int[500];
+        for (int i = 0; i < largeArray.length; i++) {
+            largeArray[i] = rng.nextInt(50);
+        }
 
         // Create context
         Context context = new Context();
 
-        // Test bubble sort
+        // Test Bubble Sort
         context.setStrategy(new BubbleSortStrategy());
+        System.out.println("\nBubble Sort (small array):");
+        System.out.println(Arrays.toString(context.executeStrategy(smallArray)));
 
-        // Sort and print sorted array to console
-        int[] sorted = context.executeStrategy(testArray);
-        System.out.println(Arrays.toString(sorted));
+        System.out.println("\nBubble Sort (large array):");
+        System.out.println(Arrays.toString(context.executeStrategy(largeArray)));
 
-        // Test counting sort
+        // Test Counting Sort
         context.setStrategy(new CountingSortStrategy());
-        sorted = context.executeStrategy(testArray);
-        System.out.println(Arrays.toString(sorted));
+        System.out.println("\nCounting Sort (small array):");
+        System.out.println(Arrays.toString(context.executeStrategy(smallArray)));
 
+        System.out.println("\nCounting Sort (large array):");
+        System.out.println(Arrays.toString(context.executeStrategy(largeArray)));
+
+        // Test Insertion Sort
         context.setStrategy(new InsertionSortStrategy());
-        sorted = context.executeStrategy(testArray);
-        System.out.println(Arrays.toString(sorted));
+        System.out.println("\nInsertion Sort (small array):");
+        System.out.println(Arrays.toString(context.executeStrategy(smallArray)));
 
+        System.out.println("\nInsertion Sort (large array):");
+        System.out.println(Arrays.toString(context.executeStrategy(largeArray)));
     }
 }
