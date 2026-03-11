@@ -2,7 +2,7 @@ package strategy;
 
 public class BubbleSortStrategy implements SortingStrategy{
     @Override
-    // Most of this code taken directly from geeksforgeeks.
+    // Most of this code taken directly from geeksforgeeks sorting algorithm section.
     public int[] sort(int[] array) {
         int[] sortedArray = array.clone();
         int n = sortedArray.length;
