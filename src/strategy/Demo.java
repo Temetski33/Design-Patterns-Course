@@ -29,5 +29,9 @@ public class Demo {
         sorted = context.executeStrategy(testArray);
         System.out.println(Arrays.toString(sorted));
 
+        context.setStrategy(new InsertionSortStrategy());
+        sorted = context.executeStrategy(testArray);
+        System.out.println(Arrays.toString(sorted));
+
     }
 }
