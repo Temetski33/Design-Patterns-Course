@@ -1,4 +1,28 @@
 package builder;
 
-public class OfficeComputerBuilder {
+public class OfficeComputerBuilder implements ComputerBuilder{
+    @Override
+    public void buildProcessor() {
+
+    }
+
+    @Override
+    public void buildRAM() {
+
+    }
+
+    @Override
+    public void buildGraphicsCard() {
+
+    }
+
+    @Override
+    public void buildHardDrive() {
+
+    }
+
+    @Override
+    public void buildOperatingSystem() {
+
+    }
 }
