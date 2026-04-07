@@ -8,17 +8,7 @@ public class Director {
         this.builder = builder;
     }
 
-    public void GamingComputerBuilder(){
-        builder.buildProcessor();
-        builder.buildRAM();
-        builder.buildRAM();
-        builder.buildGraphicsCard();
-        builder.buildHardDrive();
-        builder.buildHardDrive();
-        builder.buildOperatingSystem();
-    }
-
-    public void OfficeComputerBuilder(){
+    public void constructComputer(){
         builder.buildProcessor();
         builder.buildRAM();
         builder.buildGraphicsCard();
