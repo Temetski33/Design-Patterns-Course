@@ -31,4 +31,9 @@ public class OfficeComputerBuilder implements ComputerBuilder{
     public void buildOperatingSystem() {
         computer.addComponent(new Component("Doors 11"));
     }
+
+    @Override
+    public Computer getComputer() {
+        return computer;
+    }
 }

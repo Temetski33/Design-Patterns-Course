@@ -32,4 +32,9 @@ public class GamingComputerBuilder implements ComputerBuilder{
     public void buildOperatingSystem() {
         computer.addComponent(new Component("Linux Gaming xD"));
     }
+
+    @Override
+    public Computer getComputer() {
+        return computer;
+    }
 }
