@@ -19,6 +19,7 @@ public class Main {
         printComputer(secondComputer);
     }
 
+    // TODO add static function to computer class
     public static void printComputer(Computer componentsList) {
         System.out.println();
         System.out.println("PC configuration: ");
