@@ -20,4 +20,14 @@ public class Book implements Cloneable{
             throw new AssertionError();
         }
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author='" + author + '\'' +
+                ", title='" + title + '\'' +
+                ", publicationYear=" + publicationYear +
+                '}';
+    }
+
 }

@@ -35,4 +35,13 @@ public class Recommendation implements Cloneable{
             throw new AssertionError();
         }
     }
+
+    @Override
+    public String toString() {
+        return "Recommendation{" +
+                "targetAudience='" + targetAudience + '\'' +
+                ", books=" + books +
+                '}';
+    }
+
 }
