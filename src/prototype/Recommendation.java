@@ -24,6 +24,7 @@ public class Recommendation implements Cloneable{
     public Recommendation clone() {
         try {
             Recommendation clonedRecommendation = (Recommendation) super.clone();
+            clonedRecommendation.books = new ArrayList<>();
             // deep clone
             for (Book book : this.books) {
                 clonedRecommendation.addBook(book.clone());
