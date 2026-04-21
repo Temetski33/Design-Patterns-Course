@@ -10,4 +10,14 @@ public class Book implements Cloneable{
         this.title = title;
         this.publicationYear = publicationYear;
     }
+
+    @Override
+    public Book clone() {
+        try {
+            Book clonedBook = (Book) super.clone();
+            return clonedBook;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
+    }
 }
